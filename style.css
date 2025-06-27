@@ -1,0 +1,294 @@
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #1D1D1F;
+    --form-bg: #F3F4F6;
+    --accent-color: #0913c2;
+    --muted-color: #394150;
+    --bg-color: #E5E7EB;
+    --input-border: #D2D5DA;
+    --ff: "Inter", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: var(--ff);
+    min-height: 100vh;
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--form-bg);
+}
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: var(--bg-primary);
+    background-image: url("resources/background-image.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.2rem
+}
+p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--muted-color);
+    margin-bottom: 1rem;
+}
+.container {
+    width: 100%;
+    max-width: clamp(400px, 90vw, 1800px);
+    min-height: clamp(400px, 90vh, 1400px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+.header span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--primary-color);
+}
+.main{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    justify-content: start;
+    border: none;
+    box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+    border-radius: 1rem;
+}
+.checkout{
+    width: 50%;
+    gap: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem 0 0 1rem;
+}
+.section-wrapper{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cart-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cart-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 0.5rem;
+}
+.item-image-wrapper{
+    width: 6rem;
+    height: 6rem;
+    padding: 10px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--input-border);
+}
+.item-image-wrapper .item-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.item-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.2rem;
+}
+.item-price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.item-meta{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+}
+.item-meta .remove-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0 5px;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--muted-color);
+    transition: color 0.3s ease;
+}
+.item-meta .remove-btn:hover{
+    background-color: var(--input-border);
+    color: var(--accent-color);
+}
+hr{
+    width: 100%;
+    color: var(--secondary-color);
+    border: 1px solid var(--input-border);
+}
+.coupon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+.coupon .coupon-input{
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--input-border);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.coupon .apply-btn{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.coupon .apply-btn:hover{
+    background-color: var(--accent-color);
+}
+.price{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sub-total, .tax, .total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sub-total-label, .tax-label, .total-label{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.sub-total-price, .tax-price, .total-price{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.contact-form{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.contact-form .form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.contact-form .form-group label{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--muted-color);
+}
+.contact-form .form-group input, .contact-form .form-group select{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--input-border);
+    background-color: var(--form-bg);
+    color: var(--secondary-color);
+}
+.half-width {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+.form-group select{
+    cursor: pointer;
+}
+.form-group select option{
+    background-color: var(--form-bg);
+    color: var(--secondary-color);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.form-group.half {
+    flex: 1;
+}
+.contact-form .continue-btn{
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form .continue-btn:hover{
+    background-color: var(--accent-color);
+}

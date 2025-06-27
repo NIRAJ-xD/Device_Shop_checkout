@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Device Shop Checkout">
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Device Shop Checkout | devChallenges.io</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-image"></div>
+      <header class="header">
+        <h1>Checkout</h1>
+        <span>3 ITEMS</span>
+      </header>
+      <main class="main">
+        <section class="checkout">
+          <div class="section-wrapper">
+            <ul class="cart-list">
+              <li class="cart-item">
+                <div class="item-image-wrapper">
+                  <img src="resources/Gold.png" alt="iPhone 12 Pro" class="item-image">
+                </div>
+                <div class="item-details">
+                  <h2 class="item-name">iPhone 12 Pro</h2>
+                  <p class="item-color">Golden</p>
+                  <p class="item-qty">x 1</p>
+                </div>
+                <div class="item-meta">
+                  <strong class="item-price">$999.00</strong>
+                  <button class="remove-btn" aria-label="Remove iPhone 12 Pro">✖</button>
+                </div>
+              </li>
+            
+              <li class="cart-item">
+                <div class="item-image-wrapper">
+                  <img src="resources/Apple-watch.png" alt="Apple Watch" class="item-image">
+                </div>
+                <div class="item-details">
+                  <h2 class="item-name">Apple Watch</h2>
+                  <p class="item-color">Blue</p>
+                  <p class="item-qty">x 1</p>
+                </div>
+                <div class="item-meta">
+                  <strong class="item-price">$399.00</strong>
+                  <button class="remove-btn" aria-label="Remove Apple Watch">✖</button>
+                </div>
+              </li>
+            
+              <li class="cart-item">
+                <div class="item-image-wrapper">
+                  <img src="resources/iMac.png" alt="iMac" class="item-image">
+                </div>
+                <div class="item-details">
+                  <h2 class="item-name">iMac</h2>
+                  <p class="item-color">Green</p>
+                  <p class="item-qty">x 1</p>
+                </div>
+                <div class="item-meta">
+                  <strong class="item-price">$1199.00</strong>
+                  <button class="remove-btn" aria-label="Remove iMac">✖</button>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <div class="coupon">
+              <input type="text" placeholder="Enter Coupon Code" class="coupon-input">
+              <button class="apply-btn">Apply Coupon</button>
+            </div>
+            <div class="price">
+              <div class="sub-total">
+                <span class="sub-total-label">Subtotal</span>
+                <span class="sub-total-price">$2597.00</span>
+              </div>
+              <div class="tax">
+                <span class="tax-label">Tax</span>
+                <span class="tax-price">$623.28</span>
+              </div>
+              <div class="total">
+                <span class="total-label">Total</span>
+                <span class="total-price">$3220.28</span>
+              </div>
+            </div> 
+          </div>
+        </section>
+        <section class="contact">
+          <div class="section-wrapper">
+            <h2>Contact Information</h2>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+              </div>
+              <div class="half-width">
+                <div class="form-group half">
+                  <label for="country">Country</label>
+                  <select name="country" id="country" required>
+                    <option value="" disabled selected hidden>Select a country</option>
+                    <option value="FL">Finland</option>
+                    <option value="US">United States</option>
+                    <option value="IN">India</option>
+                    <option value="CA">Canada</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                  </select>
+                </div>
+                <div class="form-group half">
+                  <label for="address">Postal Code</label>
+                  <input type="text" id="postal-code" name="postal-code" placeholder="002345" required>
+                </div>
+              </div>
+              <button type="submit" class="continue-btn">Continue</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
