@@ -54,6 +54,12 @@ h2{
     color: var(--secondary-color);
     margin-bottom: 0.2rem
 }
+h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.2rem
+}
 p{
     font-size: 1rem;
     font-weight: 500;
@@ -193,6 +199,7 @@ hr{
     width: 70%;
     font-size: 1rem;
     font-weight: 600;
+    flex-grow: 1;
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--input-border);
@@ -295,6 +302,10 @@ hr{
 }
 .contact-form .continue-btn:hover{
     background-color: var(--accent-color);
+}
+input:focus, select:focus, button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 @media(max-width: 61.25em){
     .main{

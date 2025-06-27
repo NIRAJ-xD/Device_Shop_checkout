@@ -32,7 +32,7 @@
                   <img src="resources/Gold.png" alt="iPhone 12 Pro" class="item-image">
                 </div>
                 <div class="item-details">
-                  <h2 class="item-name">iPhone 12 Pro</h2>
+                  <h3 class="item-name">iPhone 12 Pro</h3>
                   <p class="item-color">Golden</p>
                   <p class="item-qty">x 1</p>
                 </div>
@@ -47,7 +47,7 @@
                   <img src="resources/Apple-watch.png" alt="Apple Watch" class="item-image">
                 </div>
                 <div class="item-details">
-                  <h2 class="item-name">Apple Watch</h2>
+                  <h3 class="item-name">Apple Watch</h3>
                   <p class="item-color">Blue</p>
                   <p class="item-qty">x 1</p>
                 </div>
@@ -62,7 +62,7 @@
                   <img src="resources/iMac.png" alt="iMac" class="item-image">
                 </div>
                 <div class="item-details">
-                  <h2 class="item-name">iMac</h2>
+                  <h3 class="item-name">iMac</h3>
                   <p class="item-color">Green</p>
                   <p class="item-qty">x 1</p>
                 </div>
@@ -99,16 +99,16 @@
             <form class="contact-form">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-required="true">
               </div>
               <div class="half-width">
                 <div class="form-group half">
                   <label for="country">Country</label>
-                  <select name="country" id="country" required>
+                  <select name="country" id="country" required aria-required="true">
                     <option value="" disabled selected hidden>Select a country</option>
                     <option value="FL">Finland</option>
                     <option value="US">United States</option>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="form-group half">
                   <label for="address">Postal Code</label>
-                  <input type="text" id="postal-code" name="postal-code" placeholder="002345" required>
+                  <input type="text" id="postal-code" name="postal-code" placeholder="002345" required aria-required="true">
                 </div>
               </div>
               <button type="submit" class="continue-btn">Continue</button>
